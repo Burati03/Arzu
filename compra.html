@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finalizar Compra - Arzu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="fotos/Design_sem_nome__8_-removebg-preview.png" alt="Logo Arzu" class="logo" />
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Negocie com a gente</h2>
+    <p>Produto selecionado: <span id="produtoSelecionado">...</span></p>
+    <form>
+      <label>Nome: <input type="text" name="nome" required /></label><br />
+      <label>Email: <input type="email" name="email" required /></label><br />
+      <label>Quantidade: <input type="number" name="quantidade" min="1" required /></label><br />
+      <button type="submit">Enviar Pedido</button>
+    </form>
+  </main>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const produto = urlParams.get('produto');
+    document.getElementById('produtoSelecionado').textContent = produto;
+  </script>
+
+  <footer>
+    <p>&copy; Arzu Indústria e Comércio LTDA. - 04572611000165 - 2025. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

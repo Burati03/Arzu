@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Arzu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="fotos/Design_sem_nome__8_-removebg-preview.png  " alt="Logo Arzu" class="logo" />
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Fale Conosco</h2>
+    <form>
+      <label>Nome:<br />
+        <input type="text" name="nome" required />
+      </label><br /><br />
+      <label>Email:<br />
+        <input type="email" name="email" required />
+      </label><br /><br />
+      <label>Mensagem:<br />
+        <textarea name="mensagem" rows="5" required></textarea>
+      </label><br /><br />
+      <button type="submit">Enviar</button>
+    </form>
+    <p>Email: arzu@arzu.com.br</p>
+    <p>Telefone: +55 (11) 99984-4766</p>
+    <p>Endereço: Av. Cumbica, 327 - Guarulhos/SP</p>
+  </main>
+
+  <footer>
+    <p>&copy; Arzu Indústria e Comércio LTDA. - 04572611000165 - 2025. Todos os direitos reservados.</p>
+  </footer>
+  <script>
+  let current = 0;
+  const images = document.querySelectorAll('.carousel-image');
+
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 3000);
+</script>
+
+</body>
+</html>
