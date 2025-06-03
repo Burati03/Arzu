@@ -9,7 +9,7 @@
 <body>
   <header>
     <div class="logo-container">
-      <img src="fotos/Design_sem_nome__8_-removebg-preview.png" alt="Logo Arzu" class="logo" />
+      <img src="fotos/Design sem nome (11).png" alt="Logo Arzu" class="logo" />
     </div>
     <nav>
       <ul class="nav-menu">
@@ -24,22 +24,50 @@
   <main>
     <h2>Negocie com a gente</h2>
     <p>Produto selecionado: <span id="produtoSelecionado">...</span></p>
-    <form>
-      <label>Nome: <input type="text" name="nome" required /></label><br />
-      <label>Email: <input type="email" name="email" required /></label><br />
-      <label>Quantidade: <input type="number" name="quantidade" min="1" required /></label><br />
+
+    <form action="https://formsubmit.co/ghenrique.buratti@gmail.com" method="POST">
+      <!-- Configurações ocultas -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="obrigado.html">
+
+      <!-- Inclui o nome do produto selecionado no formulário -->
+      <input type="hidden" id="inputProduto" name="Produto">
+
+      <label>Nome:<br>
+        <input type="text" name="Nome" required>
+      </label><br><br>
+
+      <label>Email:<br>
+        <input type="email" name="Email" required>
+      </label><br><br>
+
+      <label>Telefone:<br>
+        <input type="tel" name="Telefone" placeholder="(XX) XXXXX-XXXX" required>
+      </label><br><br>
+
+      <label>Quantidade:<br>
+        <input type="number" name="Quantidade" min="1" required>
+      </label><br><br>
+
+      <label>Mensagem ou observações:<br>
+        <textarea name="Mensagem" rows="4" placeholder="Alguma informação extra..."></textarea>
+      </label><br><br>
+
       <button type="submit">Enviar Pedido</button>
     </form>
   </main>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const produto = urlParams.get('produto');
+    const produto = urlParams.get('produto') || 'Não especificado';
+
     document.getElementById('produtoSelecionado').textContent = produto;
+    document.getElementById('inputProduto').value = produto;
   </script>
 
   <footer>
-    <p>&copy; Arzu Indústria e Comércio LTDA. - 04572611000165 - 2025. Todos os direitos reservados.</p>
+    <p>&copy; Arzu Indústria e Comércio LTDA. - 2025. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
+

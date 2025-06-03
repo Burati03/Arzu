@@ -9,7 +9,7 @@
 <body>
   <header>
     <div class="logo-container">
-      <img src="fotos/Design_sem_nome__8_-removebg-preview.png  " alt="Logo Arzu" class="logo" />
+      <img src="fotos/Design sem nome (11).png" alt="Logo Arzu" class="logo" />
     </div>
     <nav>
       <ul class="nav-menu">
@@ -23,36 +23,41 @@
 
   <main>
     <h2>Fale Conosco</h2>
-    <form>
-      <label>Nome:<br />
-        <input type="text" name="nome" required />
-      </label><br /><br />
-      <label>Email:<br />
-        <input type="email" name="email" required />
-      </label><br /><br />
-      <label>Mensagem:<br />
+
+    <form action="https://formsubmit.co/arzu@arzu.com.br" method="POST">
+      <!-- Desativa captcha -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Redireciona após enviar -->
+      <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+
+      <label>Nome:<br>
+        <input type="text" name="nome" required>
+      </label><br><br>
+
+      <label>Email:<br>
+        <input type="email" name="email" required>
+      </label><br><br>
+
+      <label>Assunto:<br>
+        <input type="text" name="assunto" required>
+      </label><br><br>
+
+      <label>Mensagem:<br>
         <textarea name="mensagem" rows="5" required></textarea>
-      </label><br /><br />
+      </label><br><br>
+
       <button type="submit">Enviar</button>
     </form>
+
+    <h3>Outros Contatos</h3>
     <p>Email: arzu@arzu.com.br</p>
-    <p>Telefone: +55 (11) 99984-4766</p>
-    <p>Endereço: Av. Cumbica, 327 - Guarulhos/SP</p>
+    <p>Telefone: (11) 99999-9999</p>
+    <p>Endereço: Av. Industrial, 1000 - São Paulo/SP</p>
   </main>
 
   <footer>
-    <p>&copy; Arzu Indústria e Comércio LTDA. - 04572611000165 - 2025. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Arzu Indústria e Comércio LTDA</p>
   </footer>
-  <script>
-  let current = 0;
-  const images = document.querySelectorAll('.carousel-image');
-
-  setInterval(() => {
-    images[current].classList.remove('active');
-    current = (current + 1) % images.length;
-    images[current].classList.add('active');
-  }, 3000);
-</script>
-
 </body>
 </html>

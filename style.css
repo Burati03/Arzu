@@ -1,12 +1,12 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
-  color: #000;
+  background-color: #0b0d95;
+  color: #ffffff;
 }
 
 header {
-  background-color: #002147;
+  background-color: #ffffff;
   padding: 10px;
   text-align: center;
 }
@@ -23,8 +23,9 @@ header {
   display: flex;
   justify-content: center;
   padding: 0;
+  border-radius: 5px;
   list-style: none;
-  background-color: #00162e;
+  background-color: #0b0d95;
 }
 
 .nav-menu li {
@@ -63,8 +64,8 @@ button:hover {
 }
 
 footer {
-  background-color: #002147;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 15px 0;
   margin-top: 30px;
