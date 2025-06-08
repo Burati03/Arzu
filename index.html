@@ -21,20 +21,35 @@
     </nav>
   </header>
    <main>
-  <h1>Bem-vindo à Arzu Indústria e Comércio</h1>
-  <p>Qualidade em colas, impermeabilizantes e soluções industriais.</p>
+  <h1>Bem-vindo a Arzu Indústria e Comércio LTDA.</h1>
+  <p>Especializada em produtos quimicos para papel e embalagens de papelão ondulado.</p>
 
   <div class="carousel">
-    <img src="fotos/empresa.jpg" class="carousel-image active" alt="Imagem 1" />
-    <img src="img2.jpg" class="carousel-image" alt="Imagem 2" />
-    <img src="img3.jpg" class="carousel-image" alt="Imagem 3" />
-  </div>
-</main>
-<div class="box">
-  <h1></h1>
-  <img src="fotos/Captura de tela 2025-06-06 235334.png" alt="Imagem" style=" width: 48%;">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.8821944682154!2d-46.47987412482148!3d-23.468361678863836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6032d3effc45%3A0x81e344f17cf11ddb!2sArzu%20Ind%C3%BAstria%20Com%C3%A9rcio!5e1!3m2!1spt-BR!2sbr!4v1749263991544!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <img src="fotos/empresa.jpg" class="carousel-image active" alt="Imagem 1" />
+  <img src="fotos/2-slide-1736184948458-7163933067-897e9149b58a023665a5f1d8ed89966f1736184949-1920-1920.webp" class="carousel-image" alt="Imagem 2" />
+  <img src="fotos/2-slide-1736205585856-8136063760-b7a9a160170146f0fe3f48e8da0189601736205587-1920-1920.webp" class="carousel-image" alt="Imagem 3" />
+
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
 </div>
+
+</main>
+<h2 style="text-align: center; margin-top: 40px;">Localização:</h2>
+
+<div class="box">
+  <img src="fotos/Captura de tela 2025-06-06 235334.png" alt="Imagem" style="width: 48%; border-radius: 8px;">
+  
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.8821944682154!2d-46.47987412482148!3d-23.468361678863836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6032d3effc45%3A0x81e344f17cf11ddb!2sArzu%20Ind%C3%BAstria%20Com%C3%A9rcio!5e1!3m2!1spt-BR!2sbr!4v1749263991544!5m2!1spt-BR!2sbr" 
+    width="600" 
+    height="450" 
+    style="border:0; border-radius: 8px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
 </div>
   <footer>
     <p>Email: arzu@arzu.com.br</p>
@@ -42,5 +57,33 @@
     <p>Endereço: Av. Cumbica, 327 - Guarulhos/SP</p>
     <p>&copy; Arzu Indústria e Comércio LTDA - Todos os direitos reservados - CNPJ 04.572.611/0001-65 Av. Cumbica, 327</p>
   </footer>
+
+  <script>
+  const images = document.querySelectorAll('.carousel-image');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let index = 0;
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function nextImage() {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }
+
+  function prevImage() {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  }
+
+  nextBtn.addEventListener('click', nextImage);
+  prevBtn.addEventListener('click', prevImage);
+
+  setInterval(nextImage, 4000);
+</script>
+
 </body>
 </html>

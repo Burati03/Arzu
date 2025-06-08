@@ -22,47 +22,117 @@
 
   <main>
     <h2>Negocie com a gente</h2>
-    <p>Produto selecionado: <span id="produtoSelecionado">...</span></p>
 
-<form action="https://formsubmit.co/seuemail@exemplo.com" method="POST" class="formulario">
-  <label for="name">Nome:</label>
-  <input type="text" name="name" id="name" placeholder="Digite seu nome completo" required>
+    <form action="https://formsubmit.co/ghenrique.buratti@gmail.com" method="POST" class="formulario">
+      <label for="name">Nome:</label>
+      <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
 
-  <label for="email">E-mail:</label>
-  <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+      <label for="email">E-mail:</label>
+      <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
 
-  <label for="produto">Escolha o produto:</label>
-  <select name="produto" id="produto" required>
-    <option value="">-- Selecione o produto --</option>
-    <option value="Cola Arpel">Cola Arpel</option>
-    <option value="Impermeabilizante AZ">Impermeabilizante AZ</option>
-    <option value="Tinta Protech">Tinta Protech</option>
-  </select>
+      <label for="produto">Escolha o produto:</label>
+      <select name="produto" id="produto" required>
+        <option value="">-- Selecione o produto --</option>
+        <option value="Arpel PA 450">Arpel PA 450</option>
+        <option value="Arpel PA 600">Arpel PA 600</option>
+        <option value="Arpel EP 200">Arpel EP 200</option>
+        <option value="Arfloc">Arfloc</option>
+        <option value="Arcol AP 100">Arcol AP 100</option>
+        <option value="Arcol AP 150">Arcol AP 150</option>
+        <option value="Arcol EB 180">Arcol EB 180</option>
+        <option value="Arcol EB 400">Arcol EB 400</option>
+        <option value="Arcol EB 411">Arcol EB 411</option>
+        <option value="Arcol EB 400 R">Arcol EB 400 R</option>
+        <option value="Arcol EB 410 R">Arcol EB 410 R</option>
+        <option value="Arcol EB 406">Arcol EB 406</option>
+        <option value="Arcol EB 360 P">Arcol EB 360 P</option>
+        <option value="Arcol EB 360">Arcol EB 360</option>
+        <option value="Arcol BL 200 B">Arcol BL 200 B</option>
+        <option value="Arcol CT 250 C">Arcol CT 250 C</option>
+        <option value="Arcol CT 300 C">Arcol CT 300 C</option>
+        <option value="Arcol DT 400">Arcol DT 400</option>
+        <option value="Arcoat BR 130">Arcoat BR 130</option>
+        <option value="Arcoat BR 180">Arcoat BR 180</option>
+        <option value="Arcoat BR 200">Arcoat BR 200</option>
+        <option value="Arcoat BR 250">Arcoat BR 250</option>
+        <option value="Arcoat BR 300">Arcoat BR 300</option>
+        <option value="Arcoat BR 1000">Arcoat BR 1000</option>
+      </select>
 
-  <label for="mensagem">Mensagem:</label>
-  <textarea name="mensagem" id="mensagem" rows="4" placeholder="Digite sua mensagem aqui..." required></textarea>
+      <label for="variacao">Quantidade:</label>
+      <select name="variacao" id="variacao" required>
+        <option value="">-- Selecione a Quantidade --</option>
+      </select>
 
-  <input type="hidden" name="_next" value="http://127.0.0.1:5502/obrigado.html">
+      <label for="mensagem">Mensagem:</label>
+      <textarea name="mensagem" id="mensagem" rows="4" placeholder="Digite sua mensagem aqui..." required></textarea>
 
-  <button type="submit">Enviar</button>
-</form>
-
+      <input type="hidden" name="_next" value="http://127.0.0.1:5502/obrigado.html">
+      <button type="submit">Enviar</button>
+    </form>
   </main>
-  
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const produto = urlParams.get('produto') || 'Não especificado';
-
-    document.getElementById('produtoSelecionado').textContent = produto;
-    document.getElementById('inputProduto').value = produto;
-  </script>
 
   <footer>
-      <p>Email: arzu@arzu.com.br</p>
+    <p>Email: arzu@arzu.com.br</p>
     <p>Telefone: (11) 99984-4766</p>
     <p>Endereço: Av. Cumbica, 327 - Guarulhos/SP</p>
-    <p>&copy; Arzu Indústria e Comércio LTDA - Todos os direitos reservados - CNPJ 04.572.611/0001-65 Av. Cumbica, 327</p>
+    <p>&copy; Arzu Indústria e Comércio LTDA - Todos os direitos reservados - CNPJ 04.572.611/0001-65</p>
   </footer>
+
+  <script>
+    const produtoSelect = document.getElementById('produto');
+    const variacaoSelect = document.getElementById('variacao');
+    const urlParams = new URLSearchParams(window.location.search);
+    const produtoURL = urlParams.get('produto');
+
+    const variacoesPorProduto = {
+      "Arpel PA 450": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arpel PA 600": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arpel EP 200": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arfloc": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol AP 100": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol AP 150": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol EB 180": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol EB 400": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol EB 411": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol EB 400 R": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol EB 410 R": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol EB 406": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol EB 360 P": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol EB 360": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol BL 200 B": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol CT 250 C": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol CT 300 C": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcol DT 400": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcoat BR 130": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcoat BR 180": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcoat BR 200": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcoat BR 250": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcoat BR 300": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"],
+      "Arcoat BR 1000": ["Granel 13.500Kg", "BR 45Kg", "IBC 950Kg/1000Kg", "Granel 27.500Kg"]
+    };
+
+    function atualizarVariacoes(produto) {
+      variacaoSelect.innerHTML = '<option value="">-- Selecione a Quantidade --</option>';
+      if (variacoesPorProduto[produto]) {
+        variacoesPorProduto[produto].forEach(variacao => {
+          const option = document.createElement('option');
+          option.value = variacao;
+          option.textContent = variacao;
+          variacaoSelect.appendChild(option);
+        });
+      }
+    }
+
+    if (produtoURL) {
+      const nomeProduto = decodeURIComponent(produtoURL.replace(/-/g, ' '));
+      produtoSelect.value = nomeProduto;
+      atualizarVariacoes(nomeProduto);
+    }
+
+    produtoSelect.addEventListener('change', () => {
+      atualizarVariacoes(produtoSelect.value);
+    });
+  </script>
 </body>
 </html>
-

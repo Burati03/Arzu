@@ -90,6 +90,33 @@ footer {
   position: relative;
 }
 
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+
   .box {
       display: flex;
       background-color: #fff;
@@ -139,4 +166,40 @@ footer {
 
 .formulario button:hover {
   background-color: #003366;
+}
+
+.produto-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto; /* Centraliza no meio da página */
+}
+
+.produto-box {
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.produto-box img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
 }
