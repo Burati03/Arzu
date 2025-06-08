@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finalizar Compra - Arzu</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="fotos/favicon.ico" type="image/png" />
 </head>
 <body>
   <header>
@@ -15,17 +16,21 @@
       <ul class="nav-menu">
         <li><a href="index.html">Início</a></li>
         <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="empresa.html">Arzu</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <h2>Negocie com a gente</h2>
+    <h3>Preencha os campos abaixo e em breve entraremos em contato!</h3>
 
     <form action="https://formsubmit.co/ghenrique.buratti@gmail.com" method="POST" class="formulario">
       <label for="name">Nome:</label>
       <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="telefone" name="telefone" id="telefone" placeholder="Digite seu telefone" required>
 
       <label for="email">E-mail:</label>
       <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
@@ -73,11 +78,41 @@
   </main>
 
   <footer>
-    <p>Email: arzu@arzu.com.br</p>
+     <div class="logo-container">
+      <img src="fotos/Design sem nome (11).png" alt="Logo Arzu" class="logo"" />
+    </div>
+     <nav>
+      <ul class="nav-menu2">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="empresa.html">Arzu</a></li>
+      </ul>
+    </nav>
+      <p>Email: arzu@arzu.com.br</p>
     <p>Telefone: (11) 99984-4766</p>
     <p>Endereço: Av. Cumbica, 327 - Guarulhos/SP</p>
-    <p>&copy; Arzu Indústria e Comércio LTDA - Todos os direitos reservados - CNPJ 04.572.611/0001-65</p>
+    <p>&copy; Arzu Indústria e Comércio LTDA - Todos os direitos reservados - CNPJ 04.572.611/0001-65 Av. Cumbica, 327</p>
   </footer>
+
+  <a href="https://wa.me/5511999844766?text=Olá,%20quero%20fazer%20um%20pedido!" 
+   class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+  <img src="fotos/download (10).png" alt="WhatsApp" style="width: 150%;" />
+</a>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+}
+</style>
 
   <script>
     const produtoSelect = document.getElementById('produto');
@@ -134,5 +169,6 @@
       atualizarVariacoes(produtoSelect.value);
     });
   </script>
+
 </body>
 </html>
