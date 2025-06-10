@@ -44,7 +44,7 @@ main {
 }
 
 button {
-  background-color: #0b0d95;
+  background-color: #0004ff;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -54,6 +54,7 @@ button {
 
 button:hover {
   background-color: #0b0d95;
+  color: #ffffff;
 }
 
 footer {
