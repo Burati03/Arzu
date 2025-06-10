@@ -44,17 +44,19 @@ main {
 }
 
 button {
-  background-color: #0004ff;
+  background-color: #1f21b6;
   color: #fff;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 button:hover {
-  background-color: #0b0d95;
+  background-color: #5c5eeb;
   color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 footer {
