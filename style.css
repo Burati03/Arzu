@@ -223,3 +223,34 @@ h2 {
   text-decoration: none;
   font-weight: bold;
 }
+
+.benefits-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px 0;
+  margin-left: -3%;
+  margin-right: -3%;
+  margin-top: 7%;
+  gap: 20px;
+}
+
+.benefit-item {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.benefit-item img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.benefit-item p {
+  margin: 0;
+  font-size: 16px;
+  color: black;
+}
